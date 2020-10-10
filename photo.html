@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XeniaWeb Seewen</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- If use tasks posthtml and sprite from gulpfile.js-->
+<div class="svg-sprite">
+  <include src="build/img/sprite.svg"></include>
+</div>
+
+<header class="page-header">
+  <div class="page-header__wrapper">
+    <div class="page-header__container">
+      <nav class="main-nav">
+        <button class="main-nav__toggle main-nav__toggle--off" type="button">
+          <svg class="main-nav__cross-icon" width="22" height="22">
+            <use xlink:href="#icon-cross"></use>
+          </svg>
+          <span class="visually-hidden">Закрыть меню</span>
+        </button>
+        <ul class="main-nav__list site-list default-list">
+          <li class="site-list__item"><a href="index.html">Главная</a></li>
+          <li class="site-list__item site-list__item--active"><a>Фото и видео</a></li>
+          <li class="site-list__item"><a href="form.html">Форма отзыва</a></li>
+          <li class="site-list__item"><a href="https://xeniaweb.blog/" target="_blank">Xenia WEB</a></li>
+        </ul>
+      </nav>
+      <a href="index.html" class="page-header__logo">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+          <img src="img/logo-mobile-svg.svg" class="page-header__logo-image" alt="Logo of Seewen" width="102" height="83">
+        </picture>
+      </a>
+    </div>
+    <div class="page-header__logo-block">
+      <button class="main-nav__toggle main-nav__toggle--on" type="button">
+        <svg class="main-nav__menu-icon" width="23" height="22">
+          <use xlink:href="#icon-menu"></use>
+        </svg>
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+    </div>
+    <div class="page-header__hero">
+      <h2 class="visually-hidden">Seewen</h2>
+      <svg class="page-header__title" width="230" height="40">
+        <use xlink:href="#text-seewen"></use>
+      </svg>
+    </div>
+  </div>
+</header>
+<main class="page-main">
+  <h1 class="visually-hidden">Фото и видео городка Seewen</h1>
+  <section class="gallery">
+    <div class="gallery__wrapper">
+      <div class="gallery__header">
+        <h2 class="gallery__title">Фото и видео</h2>
+        <p class="gallery__foreword">
+          Не можете решиться на путешествие из-за курса? <br>
+          Фотографии помогут вам забыть о политике и экономике.
+        </p>
+      </div>
+      <div class="gallery__content">
+        <ul class="gallery__list default-list">
+          <li class="gallery__item picture">
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-sunset-desktop@1x.webp 1x, img/photo-sunset-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-sunset-tablet@1x.webp 1x, img/photo-sunset-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-sunset-mobile@1x.webp 1x, img/photo-sunset-mobile@2x.webp 2x">
+                <source media="(min-width: 1200px)" srcset="img/photo-sunset-desktop@1x.jpg 1x, img/photo-sunset-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-sunset-tablet@1x.jpg 1x, img/photo-sunset-tablet@2x.jpg 2x">
+                <img src="img/photo-sunset-mobile@1x.jpg" srcset="img/photo-sunset-mobile@2x.jpg 2x" class="picture__photo" alt="Фото: Неродные просторы" width="280" height="280">
+              </picture>
+            <div class="picture__description">
+              <div class="picture__meta">
+                <h3 class="picture__title">Неродные просторы</h3>
+                <p class="picture__author">Автор фото: <span>Борис</span></p>
+              </div>
+              <p class="picture__likes">
+                <svg class="picture__icon-like" width="22" height="20">
+                  <use xlink:href="#icon-like"></use>
+                </svg>
+                <span class="visually-hidden">Количество лайков: </span>
+                1350
+              </p>
+            </div>
+          </li>
+          <li class="gallery__item picture">
+            <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-cactus-desktop@1x.webp 1x, img/photo-cactus-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-cactus-tablet@1x.webp 1x, img/photo-cactus-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/photo-cactus-mobile@1x.webp 1x, img/photo-cactus-mobile@2x.webp 2x">
+              <source media="(min-width: 1200px)" srcset="img/photo-cactus-desktop@1x.jpg 1x, img/photo-cactus-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/photo-cactus-tablet@1x.jpg 1x, img/photo-cactus-tablet@2x.jpg 2x">
+              <img src="img/photo-cactus-mobile@1x.jpg" class="picture__photo" alt="Фото: Местная растительность" width="280" height="280">
+            </picture>
+            <div class="picture__description">
+              <div class="picture__meta">
+                <h3 class="picture__title">Местная растительность</h3>
+                <p class="picture__author">Автор фото: <span>Сергей</span></p>
+              </div>
+              <p class="picture__likes">
+                <svg class="picture__icon-like" width="22" height="20">
+                  <use xlink:href="#icon-like"></use>
+                </svg>
+                <span class="visually-hidden">Количество лайков: </span>
+                143
+              </p>
+            </div>
+          </li>
+          <li class="gallery__item picture">
+            <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-roads-desktop@1x.webp 1x, img/photo-roads-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-roads-tablet@1x.webp 1x, img/photo-roads-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/photo-roads-mobile@1x.webp 1x, img/photo-roads-mobile@2x.webp 2x">
+              <source media="(min-width: 1200px)" srcset="img/photo-roads-desktop@1x.jpg 1x, img/photo-roads-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/photo-roads-tablet@1x.jpg 1x, img/photo-roads-tablet@2x.jpg 2x">
+              <img src="img/photo-roads-mobile@1x.jpg" class="picture__photo" alt="Фото: Дорога на север" width="280" height="280">
+            </picture>
+            <div class="picture__description">
+              <div class="picture__meta">
+                <h3 class="picture__title">Дорога на север</h3>
+                <p class="picture__author">Автор фото: <span>Петр</span></p></div>
+              <p class="picture__likes">
+                <svg class="picture__icon-like" width="22" height="20">
+                  <use xlink:href="#icon-like"></use>
+                </svg>
+                <span class="visually-hidden">Количество лайков: </span>
+                96
+              </p>
+            </div>
+          </li>
+          <li class="gallery__item picture">
+            <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.webp 1x, img/photo-bridge-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.webp 1x, img/photo-bridge-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/photo-bridge-mobile@1x.webp 1x, img/photo-bridge-mobile@2x.webp 2x">
+              <source media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x">
+              <img src="img/photo-bridge-mobile@1x.jpg" class="picture__photo" alt="Фото: Мост дьявола" width="280" height="280">
+            </picture>
+            <div class="picture__description">
+              <div class="picture__meta">
+                <h3 class="picture__title">Мост дьявола</h3>
+                <p class="picture__author">Автор фото: <span>Антон</span></p>
+              </div>
+              <p class="picture__likes">
+                <svg class="picture__icon-like" width="22" height="20">
+                  <use xlink:href="#icon-like"></use>
+                </svg>
+                <span class="visually-hidden">Количество лайков: </span>
+                254
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="presentation">
+    <div class="presentation__wrapper">
+      <h2 class="presentation__title">Все еще сомневаетесь?</h2>
+      <p class="presentation__foreword">
+        Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!
+      </p>
+<!--      <video  autoplay muted loop class="presentation__video" width="320" height="200" controls="controls" poster="img/video-desktop@1x.jpg">-->
+<!--        <source src="#" type='video/ogg; codecs="theora, vorbis"'>-->
+<!--        <source src="#" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>-->
+<!--        <source src="#" type='video/webm; codecs="vp8, vorbis"'>-->
+<!--      </video>-->
+<!--      <div class="presentation__control">-->
+<!--      </div>-->
+      <iframe class="presentation__video" width="320" height="180" src="https://www.youtube.com/embed/PgADtnTJQME?start=1?loop=1" allow="accelerometer; autoplay; loop;  encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </section>
+</main>
+<footer class="page-footer">
+  <div class="page-footer__wrapper">
+    <p class="page-footer__tags">#visitseewen</p>
+    <div class="page-footer__social social">
+      <ul class="social__list default-list">
+        <li class="social__item button">
+          <a href="https://twitter.com/XeniaBurki" class="social__link social__link--twitter" target="_blank" title="Xenia in Twitter">
+            <span class="visually-hidden">Xenia in Twitter</span>
+            <svg class="social__link-image social__link-image--twitter" width="15" height="28">
+              <use xlink:href="#icon-twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social__item button">
+          <a href="https://www.linkedin.com/in/xeniaweb" class="social__link social__link--linkedin" target="_blank" title="Xenia on Linkedin">
+            <span class="visually-hidden">Xenia on Linkedin</span>
+            <svg class="social__link-image social__link-image--fb" width="16" height="16">
+              <use xlink:href="#icon-linkedin"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social__item button">
+          <a href="https://www.youtube.com/channel/UCKSXl_LlBNShvPMrxCDIcYw" class="social__link social__link--youtube" target="_blank" title="Xenia on Youtube">
+            <span class="visually-hidden">Xenia on Youtube</span>
+            <svg class="social__link-image social__link-image--youtube" width="20" height="14">
+              <use xlink:href="#icon-youtube"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="page-footer__copyright copyright">
+      <b class="copyright__text">Разработано</b>
+      <a class="copyright__link" href="https://xeniaweb.ru/" target="_blank" title="Xenia WEB">
+        <span class="visually-hidden">Oksana Burki</span>
+        <svg class="copyright__logo" width="27" height="34">
+          <use xlink:href="#icon-academy"></use>
+        </svg>
+      </a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

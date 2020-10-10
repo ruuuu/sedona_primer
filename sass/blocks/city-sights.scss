@@ -1,0 +1,126 @@
+.city-sights {
+  background: $white;
+}
+
+.city-sights__list {
+  margin: 0;
+  padding: 10px 0 37px;
+  text-align: left;
+}
+
+.city-sights__item {
+  position: relative;
+  box-sizing: border-box;
+  padding: 0 35px 0 70px;
+
+  &:first-child {
+    order: 1;
+  }
+
+  &:nth-child(2) {
+    order: 3;
+  }
+
+  &:last-child {
+    order: 2;
+  }
+}
+
+.city-sights__icon {
+  fill: $color-light;
+
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  content: "";
+  width: 37px;
+  height: 36px;
+
+  &--house {
+    width: 37px;
+    height: 36px;
+    top: 16px;
+    left: 22px;
+  }
+
+  &--gift {
+    width: 32px;
+    height: 38px;
+    top: 15px;
+    left: 25px;
+  }
+
+  &--burger {
+    width: 40px;
+    height: 35px;
+    top: 22px;
+    left: 18px;
+  }
+}
+
+.city-sights__title {
+  margin: 0;
+  padding: 26px 20px 10px 0;
+  font-family: "PT Sans-Bold", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.city-sights__text {
+  margin: 0;
+  line-height: 21px;
+  padding: 3px 0 2px;
+}
+
+@media (min-width: $tablet-width) {
+  .city-sights__list {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 58px;
+  }
+
+  .city-sights__item {
+    text-align: center;
+    padding: 97px 35px 0 35px;
+    width: 32%;
+    margin: 0 auto;
+  }
+
+  .city-sights__title {
+    padding: 50px 30px 20px;
+
+    font-size: 21px;
+  }
+
+  .city-sights__icon {
+    left: 50%;
+
+    &--house {
+      transform: translateX(-37px);
+      top: 49px;
+      width: 75px;
+      height: 72px;
+    }
+
+    &--gift {
+      transform: translateX(-32px);
+      top: 46px;
+      width: 64px;
+      height: 75px;
+    }
+
+    &--burger {
+      transform: translateX(-39px);
+      top: 53px;
+      width: 77px;
+      height: 68px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .city-sights__list {
+    padding-bottom: 80px;
+  }
+}

@@ -1,0 +1,72 @@
+.places__names {
+  &::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 46px;
+    height: 46px;
+    background: $grey-light;
+    border-radius: 5px;
+  }
+}
+
+.places__checkbox:checked + .places__names::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 13px;
+  width: 23px;
+  height: 17px;
+  background-image: url("../img/icon-tick.svg");
+  background-repeat: no-repeat;
+}
+
+@media (min-width: $tablet-width) {
+  .places {
+    border-top: 1px solid $grey;
+    margin-bottom: 50px;
+  }
+
+  .places__list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 100px;
+  }
+
+  .places__item {
+    width: 50%;
+  }
+
+  .places__title {
+    display: block;
+    margin: 0 auto 30px;
+    padding: 0 30px;
+    width: 400px;
+    text-align: center;
+    background: $white;
+    z-index: 2;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .places__list {
+    padding: 0;
+  }
+
+  .places__item {
+    width: 25%;
+  }
+
+  .places__names {
+    &::before {
+      top: 5px;
+      left: 0;
+      width: 56px;
+      height: 56px;
+    }
+  }
+}

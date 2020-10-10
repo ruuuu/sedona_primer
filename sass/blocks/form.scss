@@ -1,0 +1,145 @@
+.form__set {
+  border: none;
+  box-sizing: border-box;
+  margin: 0;
+
+  &::after {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: $grey;
+    z-index: 50;
+  }
+}
+
+.form__title {
+  margin: 0;
+  padding: 7px 20px 25px;
+  text-align: center;
+  font-family: "PT Sans-Bold", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: $black;
+}
+
+.form__btn {
+  margin: 40px 0;
+}
+
+.form__label {
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  padding: 19px 0 19px 74px;
+  text-transform: none;
+  font-family: "PT Sans-Bold", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: $black;
+}
+
+@media (min-width: $tablet-width) {
+  .form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .form__set {
+    margin: 0;
+    padding: 0;
+    position: relative;
+
+    legend {
+      display: block;
+      box-sizing: border-box;
+    }
+
+    &::after {
+      display: none;
+    }
+
+    &--visitor {
+      order: 2;
+      width: 50%;
+      padding: 0 60px 0 60px;
+
+      &::before {
+        display: block;
+        position: absolute;
+        content: "";
+        width: 1px;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: $grey;
+      }
+    }
+
+    &--connect {
+      order: 3;
+      width: 100%;
+      padding: 0;
+      margin: 0 60px;
+    }
+
+    &--impression {
+      order: 1;
+      width: 50%;
+      padding: 0 30px 0 60px;
+    }
+
+    &--places {
+      order: 4;
+      width: 100%;
+      margin: 0 60px;
+    }
+
+    &--emotions {
+      order: 5;
+      width: 100%;
+      margin: 0 60px;
+    }
+  }
+
+  .form__title {
+    font-size: 21px;
+    padding: 0;
+    text-align: left;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form__set {
+    &--visitor {
+      padding: 0 120px 0 60px;
+
+      &::before {
+        height: 100%;
+        top: 0;
+        left: 0;
+      }
+    }
+
+    &--connect {
+      order: 3;
+      width: 100%;
+      padding: 0;
+      margin: 0 120px;
+    }
+
+    &--impression {
+      padding: 0 30px 0 120px;
+    }
+
+    &--places {
+      margin: 0 120px;
+    }
+
+    &--emotions {
+      margin: 0 120px;
+    }
+  }
+}

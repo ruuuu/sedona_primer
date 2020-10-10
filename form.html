@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XeniaWeb Seewen</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- If use tasks posthtml and sprite from gulpfile.js-->
+<div class="svg-sprite">
+  <include src="build/img/sprite.svg"></include>
+</div>
+<header class="page-header">
+  <div class="page-header__wrapper">
+    <div class="page-header__container">
+      <nav class="main-nav">
+        <button class="main-nav__toggle main-nav__toggle--off" type="button">
+          <svg class="main-nav__cross-icon" width="22" height="22">
+            <use xlink:href="#icon-cross"></use>
+          </svg>
+          <span class="visually-hidden">Закрыть меню</span>
+        </button>
+        <ul class="main-nav__list site-list default-list">
+          <li class="site-list__item"><a href="index.html">Главная</a></li>
+          <li class="site-list__item"><a href="photo.html">Фото и видео</a></li>
+          <li class="site-list__item site-list__item--active"><a>Форма отзыва</a></li>
+          <li class="site-list__item"><a href="https://xeniaweb.blog/" target="_blank">Xenia WEB</a></li>
+        </ul>
+      </nav>
+      <a href="index.html" class="page-header__logo">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+          <img src="img/logo-mobile-svg.svg" class="page-header__logo-image" alt="Logo of Seewen" width="102" height="83">
+        </picture>
+      </a>
+    </div>
+    <div class="page-header__logo-block">
+      <button class="main-nav__toggle main-nav__toggle--on" type="button">
+        <svg class="main-nav__menu-icon" width="23" height="22">
+          <use xlink:href="#icon-menu"></use>
+        </svg>
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+    </div>
+    <div class="page-header__hero">
+      <h2 class="visually-hidden">Seewen</h2>
+      <svg class="page-header__title" width="230" height="40">
+        <use xlink:href="#text-seewen"></use>
+      </svg>
+
+    </div>
+  </div>
+</header>
+<main class="page-main">
+  <h1 class="visually-hidden">Форма отправки отзыва</h1>
+  <section class="review">
+    <div class="review__wrapper">
+      <div class="review__header">
+        <h2 class="review__title">Оставьте свой отзыв</h2>
+        <p class="review__foreword">
+          Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях
+        </p>
+      </div>
+      <form action="https://echo.htmlacademy.ru" class="review__form form" method="post">
+        <fieldset class="form__set form__set--visitor visitor" title="Представьтесь:">
+          <legend class="form__title visitor__title">Представьтесь:</legend>
+          <ul class="visitor__list default-list">
+            <li class="visitor__item">
+              <label for="first-name" class="visitor__names">Имя*: </label>
+              <input class="visitor__text" id="first-name" type="text" name="first-name" placeholder="Петр">
+            </li>
+            <li class="visitor__item">
+              <label for="last-name" class="visitor__names">Фамилия*: </label>
+              <input class="visitor__text" id="last-name" type="text" name="last-name" placeholder="Иванов">
+            </li>
+            <li class="visitor__item">
+              <label for="middle-name" class="visitor__names">Отчество: </label>
+              <input class="visitor__text" id="middle-name" type="text" name="middle-name" placeholder="Александрович">
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="form__set form__set--connect connect">
+          <legend class="form__title connect__title">Контактная информация:</legend>
+          <div class="connect__container">
+            <div class="connect__wrapper">
+              <label class="connect__names" for="visitor-phone"><span>Контактный </span>телефон*:</label>
+              <div class="connect__fields">
+                <input class="connect__text connect__text--phone" type="tel" name="visitor-phone" id="visitor-phone" placeholder="Введите телефон" required>
+                <div class="connect__icon-block">
+                  <svg class="connect__icon connect__icon--phone" width="18" height="18">
+                    <use xlink:href="#icon-phone"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="connect__wrapper">
+              <label class="connect__names" for="visitor-mail">Электронная почта*:</label>
+              <div class="connect__fields">
+                <input type="email" class="connect__text connect__text--mail" name="visitor-mail" id="visitor-mail" placeholder="Введите e-mail" required>
+                <div class="connect__icon-block">
+                  <svg class="connect__icon connect__icon--mail" width="16" height="12">
+                    <use xlink:href="#icon-mail"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="form__set form__set--impression impression">
+          <legend class="form__title impression__title">Ваше общее впечатление:</legend>
+          <ul class="impression__list default-list">
+            <li class="impression__item">
+              <input type="radio" name="impression" value="Скорее положительное" class="visually-hidden impression__radio" id="impression1" checked>
+              <label class="form__label impression__names" for="impression1">Скорее положительное</label>
+            </li>
+            <li class="impression__item">
+              <input type="radio" name="impression" value="Скорее отрицательное" class="visually-hidden impression__radio" id="impression2">
+              <label class="form__label impression__names" for="impression2">Скорее отрицательное</label>
+            </li>
+            <li class="impression__item">
+              <input type="radio" name="impression" value="Затрудняюсь ответить" class="visually-hidden impression__radio" id="impression3">
+              <label class="form__label impression__names" for="impression3">Затрудняюсь ответить</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="form__set form__set--places places">
+          <legend class="form__title places__title">Посещенные достопримечательности:</legend>
+          <ul class="places__list default-list">
+            <li class="places__item">
+              <input type="checkbox" name="place1" value="Мост Дьявола" class="visually-hidden places__checkbox" id="place1" checked>
+              <label class="form__label places__names" for="place1">Мост Дьявола</label>
+            </li>
+            <li class="places__item">
+              <input type="checkbox" name="place2" value="Гора-Колокол" class="visually-hidden places__checkbox" id="place2" checked>
+              <label class="form__label places__names" for="place2">Гора-Колокол</label>
+            </li>
+            <li class="places__item">
+              <input type="checkbox" name="place3" value="Слайд-парк" class="visually-hidden places__checkbox" id="place3" checked>
+              <label class="form__label places__names" for="place3">Слайд-парк</label>
+            </li>
+            <li class="places__item">
+              <input type="checkbox" name="place4" value="Красные скалы" class="visually-hidden places__checkbox" id="place4">
+              <label class="form__label places__names" for="place4">Красные скалы</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="form__set form__set--emotions emotions">
+          <legend class="form__title emotions__title">Опишите свои эмоции:</legend>
+          <label for="emotions" class="visually-hidden">Эмоции: </label>
+          <textarea class="emotions__text" name="emotions" id="emotions" cols="20" rows="10" placeholder="Опишите подробно все свои восторги "></textarea>
+          <button type="submit" class="button form__btn">Отправить отзыв</button>
+        </fieldset>
+      </form>
+    </div>
+  </section>
+</main>
+<footer class="page-footer">
+  <div class="page-footer__wrapper">
+    <p class="page-footer__tags">#visitseewen</p>
+    <div class="page-footer__social social">
+      <ul class="social__list default-list">
+        <li class="social__item button">
+          <a href="https://twitter.com/XeniaBurki" class="social__link social__link--twitter" target="_blank" title="Xenia in Twitter">
+            <span class="visually-hidden">Xenia in Twitter</span>
+            <svg class="social__link-image social__link-image--twitter" width="15" height="28">
+              <use xlink:href="#icon-twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social__item button">
+          <a href="https://www.linkedin.com/in/xeniaweb" class="social__link social__link--linkedin" target="_blank" title="Xenia on Linkedin">
+            <span class="visually-hidden">Xenia on Linkedin</span>
+            <svg class="social__link-image social__link-image--fb" width="16" height="16">
+              <use xlink:href="#icon-linkedin"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social__item button">
+          <a href="https://www.youtube.com/channel/UCKSXl_LlBNShvPMrxCDIcYw" class="social__link social__link--youtube" target="_blank" title="Xenia on Youtube">
+            <span class="visually-hidden">Xenia on Youtube</span>
+            <svg class="social__link-image social__link-image--youtube" width="20" height="14">
+              <use xlink:href="#icon-youtube"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="page-footer__copyright copyright">
+      <b class="copyright__text">Разработано</b>
+      <a class="copyright__link" href="https://xeniaweb.ru/" target="_blank" title="Xenia WEB">
+        <span class="visually-hidden">Oksana Burki</span>
+        <svg class="copyright__logo" width="27" height="34">
+          <use xlink:href="#icon-academy"></use>
+        </svg>
+      </a>
+    </div>
+  </div>
+</footer>
+<section class="modal-ok">
+  <div class="modal-ok__wrapper">
+    <h2 class="modal-ok__title">Ваш отзыв отправлен!</h2>
+    <p class="modal-ok__text">
+      Спасибо за ваше участие, ваш отзыв уже поступил к нам.
+      В ближайшее время мы опубликуем его на сайте.
+    </p>
+    <button class="modal-ok__btn button">Закрыть окно</button>
+  </div>
+</section>
+<section class="modal-error">
+  <div class="modal-error__wrapper">
+    <h2 class="modal-error__title">Что-то пошло не так!</h2>
+    <p class="modal-error__text">
+      Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
+    </p>
+    <button class="modal-error__btn button">Ок</button>
+  </div>
+</section>
+</body>
+</html>

@@ -1,0 +1,39 @@
+.emotions {
+  &::after {
+    display: none;
+  }
+}
+
+.emotions__text {
+  display: block;
+  box-sizing: border-box;
+  border: none;
+  background: $grey-light;
+  width: 100%;
+  min-width: 260px;
+  padding: 12px 17px 12px 17px;
+
+  &::placeholder {
+    font-family: "PT Sans-Bold", "Arial", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    color: $black;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .emotions {
+    border-top: 1px solid $grey;
+  }
+
+  .emotions__title {
+    display: block;
+    margin: 0 auto 30px;
+    padding: 0 30px;
+    width: 400px;
+    text-align: center;
+    background: $white;
+    z-index: 2;
+  }
+}
